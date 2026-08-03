@@ -39,22 +39,25 @@ const conversation = await Conversation.create({
   title: req.file.originalname,
 });
 
-    const chunkDocuments = await Promise.all(
-  chunks.map(async (chunk, index) => {
-    const embedding = await generateEmbedding(chunk.pageContent);
+    const chunkDocuments = [];
 
-    return {
-      documentId: document._id,
-      chunkIndex: index,
-      text: chunk.pageContent,
-      embedding,
-    };
-  })
-);
+for (let index = 0; index < chunks.length; index++) {
+
+  console.log(`Embedding ${index + 1}/${chunks.length}`);
+
+  const chunk = chunks[index];
+
+  const embedding = await generateEmbedding(chunk.pageContent);
+
+  chunkDocuments.push({
+    documentId: document._id,
+    chunkIndex: index,
+    text: chunk.pageContent,
+    embedding,
+  });
+}
 
 await DocumentChunk.insertMany(chunkDocuments);
-
-    await DocumentChunk.insertMany(chunkDocuments);
 
     document.status = "completed";
     await document.save();
