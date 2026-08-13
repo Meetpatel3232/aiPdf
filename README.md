@@ -109,6 +109,52 @@ https://github.com/GitWithKomal/DockMind-AI
 
 ---
 
+## DevOps & Containerization
+
+DockMind AI is containerized using Docker and Docker Compose for consistent local development and production-style deployment.
+
+### Docker Implementation
+
+- Created separate Dockerfiles for the Node.js/Express backend and React frontend.
+- Used `node:24-alpine` for the backend container.
+- Used Nginx to serve the production-built React frontend.
+- Used Docker Compose to orchestrate the frontend and backend services.
+- Configured environment variables through Docker Compose.
+- Configured port mapping:
+  - Frontend: `3000:80`
+  - Backend: `5000:5000`
+- Added Docker health checks for the backend service.
+- Configured `restart: unless-stopped` for service recovery.
+- Tested container lifecycle operations including build, start, stop, logs, restart and recovery.
+- Verified MongoDB Atlas connectivity from the containerized backend.
+
+### Docker Compose Architecture
+
+```text
+                    Browser
+                       |
+                 localhost:3000
+                       |
+                +--------------+
+                |   Frontend   |
+                | React + Nginx|
+                +--------------+
+                       |
+                  API Requests
+                       |
+                 localhost:5000
+                       |
+                +--------------+
+                |   Backend    |
+                | Node/Express |
+                +--------------+
+                    /       \
+                   /         \
+                  v           v
+          MongoDB Atlas    Gemini API
+
+---
+
 # 📁 Project Structure
 
 ```
