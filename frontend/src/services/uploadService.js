@@ -7,4 +7,4 @@ export const uploadDocument = async (file) => {
   const response = await api.post("/api/upload", formData);
 
   return response.data;
-};
+}; 
