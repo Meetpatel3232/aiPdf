@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🚀 DockMind AI
 
 > **AI-Powered Document Assistant using RAG (Retrieval-Augmented Generation)**
@@ -356,3 +357,7 @@ It helps others discover the project and motivates further development.
 # 📄 License
 
 This project is licensed under the MIT License.
+=======
+# aiPdf
+ai pdf assistant project 2
+>>>>>>> 042ff2abd341917201207778baca3cfb9d9ac214
