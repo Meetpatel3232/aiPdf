@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "description": "Frontend for DockMind AI - AI-powered PDF Chat Application",
-"author": "Komal Nimje",
+  "author": "Komal Nimje",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -13,17 +13,20 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.3",
-    "axios": "^1.18.1",
-    "framer-motion": "^12.42.2",
+    "axios": "^1.21.1",
+    "framer-motion": "^12.43.0",
+    "lucide-react": "^1.77.0",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
     "react-dropzone": "^19.1.1",
     "react-hook-form": "^7.83.0",
-    "react-hot-toast": "^2.6.0",
+    "react-hot-toast": "^2.6.1",
     "react-icons": "^5.7.0",
     "react-markdown": "^10.1.0",
-    "react-router-dom": "^7.18.1",
-    "tailwindcss": "^4.3.3"
+    "react-router-dom": "^7.18.6",
+    "remark-gfm": "^4.0.1",
+    "tailwindcss": "^4.3.3",
+    "zustand": "^5.1.0"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
@@ -35,5 +38,8 @@
     "eslint-plugin-react-refresh": "^0.5.3",
     "globals": "^17.7.0",
     "vite": "^8.1.1"
-  }
+  },
+  "main": "eslint.config.js",
+  "keywords": [],
+  "license": "ISC"
 }
